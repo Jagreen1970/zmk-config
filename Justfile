@@ -84,9 +84,13 @@ clean-nix:
 draw:
     #!/usr/bin/env bash
     set -euo pipefail
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/base.keymap" --virtual-layers Combos >"{{ draw }}/base.yaml"
-    yq -Yi '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
-    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" >"{{ draw }}/base.svg"
+    keymap -c "{{ draw }}/my_config.yaml" parse -z "{{ config }}/corne.keymap" >"{{ draw }}/base.yaml"
+    keymap -c "{{ draw }}/my_config.yaml" draw -s Base --keys-only "{{ draw }}/base.yaml" >"{{ draw }}/layer_base.svg"
+    keymap -c "{{ draw }}/my_config.yaml" draw -s Num --keys-only "{{ draw }}/base.yaml" >"{{ draw }}/layer_num.svg"
+    keymap -c "{{ draw }}/my_config.yaml" draw -s Nav --keys-only "{{ draw }}/base.yaml" >"{{ draw }}/layer_nav.svg"
+    keymap -c "{{ draw }}/my_config.yaml" draw -s Fn --keys-only "{{ draw }}/base.yaml" >"{{ draw }}/layer_fn.svg"
+    keymap -c "{{ draw }}/my_config.yaml" draw -s Sys --keys-only "{{ draw }}/base.yaml" >"{{ draw }}/layer_sys.svg"
+    keymap -c "{{ draw }}/my_config.yaml" draw -s Base --combos-only "{{ draw }}/base.yaml" >"{{ draw }}/layer_combos.svg"
 
 # initialize west
 init:
