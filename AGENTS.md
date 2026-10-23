@@ -1,5 +1,14 @@
 # Customization guide
 
+> **This fork (Jagreen1970/zmk-config):** builds a single wireless Corne (nice!nano v2 +
+> nice!view, see `build.yaml`) with a 36-key QWERTY keymap. `config/corne.keymap` is the entry
+> point; `config/base.keymap` holds all layers as plain 36-key `ZMK_LAYER`s (no `ZMK_BASE_LAYER`
+> adapter), with globals, layer ids and behaviors split into `globals.h`, `layers.h`,
+> `custom_behaviors.dtsi`, `homerow_mods.dtsi` and `nav.dtsi`. There is no mouse layer and no
+> other board. The multi-board/34-key sections below are urob's upstream guide; the ground rules
+> (pin-west, `just build`, `just draw`) apply unchanged. `just draw` renders `draw/base.svg` and
+> per-layer `draw/layer_*.svg` from `config/corne.keymap` via `draw/my_config.yaml`.
+
 Instructions for working on this ZMK config — written for coding agents, but equally usable by
 humans adapting this repo as a starting point for their own keymap. For background on the keymap
 and the build pipeline, see the [README](README.md).
