@@ -1,0 +1,6 @@
+#include "base.keymap"
+
+/{ chosen { zmk,physical-layout = &foostan_corne_5col_layout; }; };
+
+/* use 5-column layout */
+// / { chosen { zmk,matrix_transform = &five_column_transform; }; };
