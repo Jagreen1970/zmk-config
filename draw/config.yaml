@@ -3,7 +3,7 @@ parse_config:
     - "modules/zmk/helpers/include"
 
   zmk_preamble: |
-    #include <zmk-helpers/key-labels/34.h>
+    #include <zmk-helpers/key-labels/36.h>
     #define CONFIG_WIRELESS
 
   raw_binding_map:
@@ -175,7 +175,7 @@ parse_config:
 draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
-  footer_text: "urob/zmk-config"
+  footer_text: "Jagreen1970/zmk-config"
   glyph_tap_size: 15
   glyph_hold_size: 12
   glyph_shifted_size: 10
