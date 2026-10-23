@@ -7,3 +7,7 @@ zephyr
 zmk
 draw/base.yaml
 draw/overview.yaml
+bootloader
+tools
+.idea
+.DS_Store
